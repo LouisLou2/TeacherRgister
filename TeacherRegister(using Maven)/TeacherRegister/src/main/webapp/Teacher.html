@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<mata equiv="refresh" content="900" url="Warning.html"/>--><!--15min未操作完成则跳转-->
+    <title>PageForTeachersToRegister</title>
+</head>
+<body style="background-color:#f0ffff">
+
+<center>
+    <form name="form1" action="servlet/TeacherServlet" method="post">
+        <table style="border-width:0"; align="center">
+            <h1><span style="color: #0000CD; ">教师身份注册</span></h1>
+            <h4><span style="color: #0000CD; ">Register As a Teacher</span></h4>
+            <tr>
+                <td align="right"><label for="tcn"><b><font color="#0000CD">姓名：</font></b></label></td>
+                <td><input type="text" name="tcn" id="tcn" value="杨柳" /></td>
+            </tr>
+
+            <tr>
+                <td align="right"><b><font color="#0000CD">性别：</font></b></td>
+                <td>
+                    <label for="WTsex">女</label><input type="radio" name="tsex" id="WTsex" value="M"checked/>
+                    <label for="MTsex">男</label><input type="radio" name="tsex" id="MTsex" value="W"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right"><label for="tage"><b><font color="#0000CD">年龄：</font></b></label></td>
+                <td><input type="number" name="tage" id="tage"/></td>
+            </tr>
+
+            <tr>
+                <td align="right"><b><font color="#0000CD">职称：</font></b></td>
+                <td><label for="pro"    >教授      </label><input type="radio" name="pst" id="pro"  value="101"/>
+                    <label for="apro">   副教授    </label><input type="radio" name="pst" id="apro" value="102"/>
+                    <label for="stea">   讲师      </label><input type="radio" name="pst" id="stea" value="103"/>
+                    <label for="assi">   助教      </label><input type="radio" name="pst" id="assi" value="104"/></td>
+            </tr>
+
+            <tr>
+                <td align="right"><b><font color="#0000CD">是否党员：</font></b></td>
+                <td><label for="yprt">是</label><input type="radio" name="prt" id="yprt" value="true"/>
+                    <label for="nprt">否</label><input type="radio" name="prt" id="nprt" value="false"/></td>
+            </tr>
+
+            <tr>
+                <td align="right"><b><font color="#0000CD">所在院系：</font></b></td>
+                <td>
+                    <select name="clg">
+                        <option value="201" >        自动化学院</option>
+                        <option value="202" selected>计算机学院</option>
+                        <option value="203" >        软件学院</option>
+                        <option value="204">		 信息科学与工程学院</option>
+                        <option value="205">         物理与电子学院</option>
+                        <option value="206">         航空航天学院</option>
+                        <option value="207">         交通运输工程学院</option>
+                        <option value="208">         机电工程学院</option>
+                        <option value="209">         地球科学与信息物理学院</option>
+
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right"><b><font color="#0000CD">所授课程：</font></b></td>
+                <td>
+                    <input type="checkbox" name="Course1" value="301">信息系统基础
+                    <input type="checkbox" name="Course2" value="302">计算机程序设计基础
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="Course4" value="304">软件度量与应用
+                    <input type="checkbox" name="Course3" value="303">计算机原理与结构
+                </td><!--这里name属性采用Cours+数字形式，与servelet程序中的策略呼应。-->
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="Course5" value="305">数据库原理与应用
+                </td><!--这里name属性采用Cours+数字形式，与servelet程序中的策略呼应。-->
+            </tr>
+            <tr>
+                <td align="right"><label for="tpsw"><b><font color="#0000CD">创建密码:</font></b></label></td>
+                <td><input type="password" name="tpsw" id="tpsw" /></td>
+            </tr>
+            <tr>
+                <td align="right"><label for="teml"><b><font color="#0000CD">email:</font></b></label></td>
+                <td><input type="email" name="teml" id="teml" value="@csu.edu.com"/></td>
+            <tr>
+                <td align="right"><label for="tph"><b><font color="#0000CD">手机号码:</font></b></label></td>
+                <td><input type="number" name="tph" id="tph" maxlength="11"/></td>
+            </tr>
+            <tr height="10"></tr><!--设置了tr的height属性却不添加单元格，会只增加上下相邻的单元格的距离-->
+            <tr>
+                <td></td>
+                <td><input name="button" type="button" value="提交" onclick="check(form1)">&emsp;&ensp;&nbsp;
+                    <input type="reset" value="清空全部"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+<script language="JavaScript" type="text/javascript" src="demo.js"></script>
+
+</body>
+</html>
